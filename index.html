@@ -18,9 +18,14 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--main-bg);
+      background: url("images/background/background.jpg") no-repeat center;
+      background-position: center 200px;
+      background-size: cover;
       color: var(--dark);
+      position: relative;
+      min-height: 100vh;
     }
+    
 
     /* Üst kısım (header) */
     header {
@@ -76,24 +81,24 @@
       }
     }
 
-    /* Örnek placeholder content */
-    .content {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-    }
+
 
     .content h2 {
       font-size: 1.6em;
-      color: #555;
+      color: #000000;
     }
 
     .footer {
       text-align: center;
       font-size: 0.9em;
-      margin: 60px 0 20px;
-      color: #999;
+      color: #000000;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
     }
+
+
   </style>
 </head>
 <body>
@@ -114,12 +119,8 @@
     
   </nav>
 
-  <div class="content">
-    <h2>Yukarıdaki kategorilerden menümüzü inceleyebilirsiniz.</h2>
-  </div>
-
   <div class="footer">
     &copy; 2025 Krok Cafe | Tüm hakları saklıdır.
   </div>
 </body>
-</html>"
+</html>
