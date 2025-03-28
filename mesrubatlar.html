@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sıcak Kahveler| Krok Cafe</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --main-bg: #eaeaea;
+      --accent: #3498db;
+      --dark: #006400;
+      --light: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--main-bg);
+      color: var(--dark);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--dark), #3b4b5c);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: var(--light);
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--dark);
+      background: #f1f1f1;
+      margin: 8px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 280px;
+    }
+
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .item-info {
+      padding: 15px;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .modal-content, .modal {
+      animation-name: zoom;
+      animation-duration: 0.3s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sıcak Kahveler</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="tatlilar.html">Tatlılar</a>
+    <a href="sicak-kahveler.html">Sıcak Kahveler</a>
+    <a href="soguk-kahveler.html">Soğuk Kahveler</a>
+    <a href="sicak-icecekler.html">Sıcak İçecekler</a>
+    <a href="mesrubatlar.html">Meşrubatlar</a>
+    <a href="sandvicler.html">Sandviçler</a>
+    <a href="atistirmaliklar.html">Atıştırmalıklar</a>
+  </nav>
+
+  <main class="menu-grid">
+    <div class="item">
+      <img src="images/ice-latte.jpg" alt="Ice Latte">
+      <div class="item-info">
+        <h3>Ice Latte</h3>
+        <p>Buzlu espresso ve soğuk süt</p>
+        <div class="price">48₺</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/ice-americano.jpg" alt="Ice Americano">
+      <div class="item-info">
+        <h3>Ice Americano</h3>
+        <p>Buzlu kahve ve su</p>
+        <div class="price">42₺</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/ice-mocha.jpg" alt="Ice Mocha">
+      <div class="item-info">
+        <h3>Ice Mocha</h3>
+        <p>Soğuk çikolatalı kahve</p>
+        <div class="price">50₺</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/latte.jpg" alt="Ice Caramel Latte">
+      <div class="item-info">
+        <h3>Ice Caramel Latte</h3>
+        <p>Karamel soslu soğuk latte</p>
+        <div class="price">52₺</div>
+      </div>
+    </div>
+  </main>
+
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    document.querySelectorAll('.item img').forEach(img => {
+      img.addEventListener('click', function() {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+      });
+    });
+
+    document.getElementById('imgModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

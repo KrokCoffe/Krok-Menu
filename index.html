@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krok Cafe | Ana Menü</title>
+  <style>
+    :root {
+      --main-bg: #eaeaea; /* Arkaplan için yumuşak gri */
+      --accent: #3498db;  /* Link hover rengi */
+      --dark: #2c3e50;   /* Başlık, koyu ton */
+      --light: #ffffff;  /* Beyaz */
+      --menu-bg: #f1f1f1;/* Nav butonları arkaplanı */
+      --green-1: #2e7d32;/* Yeşil */
+      --green-2: #1b5e20;/* Daha koyu yeşil (gradient için) */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--main-bg);
+      color: var(--dark);
+    }
+
+    /* Üst kısım (header) */
+    header {
+      /* Daha yeşil tonlu gradient */
+      background: linear-gradient(to right, var(--green-2), var(--green-1));
+      color: var(--light);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    /* Navigasyon Menüsü */
+    nav {
+      display: flex;
+      flex-wrap: nowrap;         /* Tek satır, yana kaydırma */
+      overflow-x: auto;          /* Yatay scroll etkin */
+      -webkit-overflow-scrolling: touch; /* iOS için yumuşak scroll */
+      background: var(--light);
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      white-space: nowrap;       /* Linklerin alt satıra geçmesini engeller */
+      margin: 0;
+    }
+
+    nav a {
+      display: inline-block;     /* Yan yana dizilmesini güçlendirir */
+      text-decoration: none;
+      color: var(--green-2);
+      background: var(--menu-bg);
+      margin: 8px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+      white-space: nowrap;       /* Buton metninin tek satır olmasını sağlar */
+    }
+
+    nav a:hover {
+      background: var(--green-1);
+      color: #fff;
+    }
+
+    /* Mobil uyum (örnek) - Link boyutlarını biraz büyütebilirsin */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav a {
+        padding: 10px 16px;
+      }
+    }
+
+    /* Örnek placeholder content */
+    .content {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    .content h2 {
+      font-size: 1.6em;
+      color: #555;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin: 60px 0 20px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Krok Cafe</h1>
+    <p>Menü Kategorilerimizi Keşfedin</p>
+  </header>
+
+  <!-- Yana Doğru Kaydırılabilir Nav -->
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="tatlilar.html">Tatlılar</a>
+    <a href="sicak-kahveler.html">Sıcak Kahveler</a>
+    <a href="soguk-kahveler.html">Soğuk Kahveler</a>
+    <a href="sicak-icecekler.html">Sıcak İçecekler</a>
+    <a href="mesrubatlar.html">Meşrubatlar</a>
+    <a href="sandvicler.html">Sandviçler</a>
+    <a href="atistirmaliklar.html">Atıştırmalıklar</a>
+  </nav>
+
+  <div class="content">
+    <h2>Yukarıdaki kategorilerden menümüzü inceleyebilirsiniz.</h2>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Krok Cafe | Tüm hakları saklıdır.
+  </div>
+</body>
+</html>"
