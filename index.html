@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Krok Cafe | Ana Menü</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     :root {
       --main-bg: #eaeaea; /* Arkaplan için yumuşak gri */
@@ -18,7 +19,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url("images/background/background.jpg") no-repeat center;
+      background: url("images/background/krok.jpg") no-repeat center;
       background-position: center 200px;
       background-size: cover;
       color: var(--dark);
@@ -34,6 +35,7 @@
       color: var(--light);
       padding: 40px 20px;
       text-align: center;
+      border-bottom: 1px solid #efeded;
     }
     header h1 {
       margin: 0;
@@ -46,7 +48,7 @@
       flex-wrap: nowrap;         /* Tek satır, yana kaydırma */
       overflow-x: auto;          /* Yatay scroll etkin */
       -webkit-overflow-scrolling: touch; /* iOS için yumuşak scroll */
-      background: var(--light);
+      background: linear-gradient(to right, var(--green-2), var(--green-1));
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       white-space: nowrap;       /* Linklerin alt satıra geçmesini engeller */
@@ -81,13 +83,6 @@
       }
     }
 
-
-
-    .content h2 {
-      font-size: 1.6em;
-      color: #000000;
-    }
-
     .footer {
       text-align: center;
       font-size: 0.9em;
@@ -97,7 +92,6 @@
       left: 0;
       width: 100%;
     }
-
 
   </style>
 </head>
@@ -116,7 +110,6 @@
     <a href="sicak-icecekler.html">Sıcak İçecekler</a>
     <a href="soguk-icecekler.html">Soğuk İçecekler</a>
     <a href="sandvicler.html">Sandviçler</a>
-    
   </nav>
 
   <div class="footer">
