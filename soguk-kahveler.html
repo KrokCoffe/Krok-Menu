@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soğuk Kahveler| Krok Cafe</title>
+  <title>Soguk İçecekler| Krok Cafe</title>
   <link rel="stylesheet" href="style.css">
   <style>
     :root {
@@ -16,7 +16,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--main-bg);
+      background: rgb(186, 207, 150);
       color: var(--dark);
     }
 
@@ -36,7 +36,7 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      background: var(--light);
+      background: rgb(186, 207, 150);
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       white-space: nowrap;
@@ -145,7 +145,7 @@
   <header>
     <h1>Soğuk Kahveler</h1>
   </header>
-  
+
   <nav>
     <a href="index.html">Anasayfa</a>
     <a href="tatlilar.html">Tatlılar</a>
@@ -156,9 +156,10 @@
     <a href="sandvicler.html">Sandviçler</a>
   </nav>
 
+
   <main class="menu-grid">
     <div class="item">
-      <img src="images/latte.jpg" alt="Ice Latte">
+      <img src="images/ice-latte.jpg" alt="Ice Latte">
       <div class="item-info">
         <h3>Ice Latte</h3>
         <p>Buzlu espresso ve soğuk süt</p>
@@ -174,7 +175,7 @@
       </div>
     </div>
     <div class="item">
-      <img src="images/icemocha.jpg" alt="Ice Mocha">
+      <img src="images/ice-mocha.jpg" alt="Ice Mocha">
       <div class="item-info">
         <h3>Ice Mocha</h3>
         <p>Soğuk çikolatalı kahve</p>
@@ -182,14 +183,30 @@
       </div>
     </div>
     <div class="item">
-      <img src="images/latte2.jpeg" alt="Ice Caramel Latte">
+      <img src="images/latte.jpg" alt="Ice Caramel Latte">
       <div class="item-info">
         <h3>Ice Caramel Latte</h3>
         <p>Karamel soslu soğuk latte</p>
         <div class="price">52₺</div>
       </div>
     </div>
-  </main>
+  <div class="item">
+    <img src="images/latte.jpg" alt="Ice Zebra Mocha">
+    <div class="item-info">
+      <h3>Decaf Iced Latte</h3>
+      <p>Kafeinsiz soğuk latte</p>
+      <div class="price">52₺</div>
+    </div>
+  </div>
+  <div class="item">
+    <img src="images/ice-mocha.jpg" alt="Ice Mocha">
+    <div class="item-info">
+      <h3>Ice Zebra Mocha</h3>
+      <p>Fındıklı Iced Latte</p>
+      <div class="price">50₺</div>
+    </div>
+  </div>
+</main>
 
   <div id="imgModal" class="modal">
     <span class="close" onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
