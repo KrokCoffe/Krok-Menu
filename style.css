@@ -49,3 +49,9 @@ header {
     font-weight: bold;
     color: #e67e22;
 }
+
+.calorie {
+    margin-top: 4px;
+    font-size: 0.7em;
+    color: #999;
+}
