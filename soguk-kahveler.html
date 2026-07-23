@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tatlılar| Krok Cafe</title>
+  <title>Soguk İçecekler| Krok Cafe</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     :root {
       --main-bg: #eaeaea; /* Arkaplan için yumuşak gri */
@@ -15,6 +17,7 @@
       --green-1: #2e7d32;/* Yeşil */
       --green-2: #1b5e20;/* Daha koyu yeşil (gradient için) */
     }
+
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
@@ -79,6 +82,7 @@
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
       width: 280px;
     }
 
@@ -142,7 +146,7 @@
 </head>
 <body>
   <header>
-    <h1>Tatlılar</h1>
+    <h1>Soğuk Kahveler</h1>
   </header>
 
   <nav>
@@ -157,79 +161,87 @@
     <a href="sandvicler.html">Sandviçler</a>
   </nav>
 
+
   <main class="menu-grid">
     <div class="item">
       <div class="item-info">
-        <h3>Elmalı Turta</h3>
-        <p></p>
-        <div class="price">290₺</div>
+        <h3>Ice Latte</h3>
+        <div class="price">240₺</div>
+        <div class="calorie">~110 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Ice Americano</h3>
+        <div class="price">220₺</div>
+        <div class="calorie">~10 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Freddo Espresso</h3>
+        <div class="price">240₺</div>
+        <div class="calorie">~15 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Ice Mocha</h3>
+        <p>Çikolatalı Soğuk Kahve</p>
+        <div class="price">270₺</div>
+        <div class="calorie">~200 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Ice Caramel Latte</h3>
+        <div class="price">270₺</div>
+        <div class="calorie">~200 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Ice Salted Caramel Latte</h3>
+        <div class="price">270₺</div>
+        <div class="calorie">~210 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Ice Vanillia Latte</h3>
+        <div class="price">270₺</div>
+        <div class="calorie">~190 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Iced White Chocolate Mocha </h3>
+        <div class="price">270₺</div>
+        <div class="calorie">~230 kcal</div>
+      </div>
+    </div>
+ <div class="item">
+      <div class="item-info">
+        <h3>Ice Lotus Latte</h3>
+        <div class="price">280₺</div>
         <div class="calorie">~250 kcal</div>
       </div>
     </div>
-    <div class="item">
+ <div class="item">
       <div class="item-info">
-        <h3>Tiramisu Pasta</h3>
-        <p></p>
-        <div class="price">300₺</div>
-        <div class="calorie">~290 kcal</div>
+        <h3>Ice Chai Tea Latte</h3>
+        <div class="price">270₺</div>
+        <div class="calorie">~180 kcal</div>
       </div>
     </div>
-    <div class="item">
+ <div class="item">
       <div class="item-info">
-        <h3>Lotus Pasta</h3>
-        <p></p>
-        <div class="price">300₺</div>
-        <div class="calorie">~300 kcal</div>
+        <h3>Ice Toffie Nut Latte</h3>
+        <div class="price">270₺</div>
+        <div class="calorie">~200 kcal</div>
       </div>
     </div>
-    <div class="item">
-      <div class="item-info">
-        <h3>San Sebastian</h3>
-        <p>Çikolata ile servis edilir</p>
-        <div class="price">320₺</div>
-        <div class="calorie">~330 kcal</div>
-      </div>
-    </div>
+  </main>
 
-    
-    <div class="item">
-      <div class="item-info">
-        <h3>Brownie</h3>
-        <p></p>
-        <div class="price">320₺</div>
-        <div class="calorie">~280 kcal</div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-info">
-        <h3>Cookie</h3>
-        <p></p>
-        <div class="price">150₺</div>
-        <div class="calorie">~170 kcal</div>
-      </div>
-    </div>
-
-
-  <div id="imgModal" class="modal">
-    <span class="close" onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
-    <img class="modal-content" id="modalImage">
-  </div>
-
-  <script>
-    document.querySelectorAll('.item img').forEach(img => {
-      img.addEventListener('click', function() {
-        const modal = document.getElementById('imgModal');
-        const modalImg = document.getElementById('modalImage');
-        modal.style.display = 'block';
-        modalImg.src = this.src;
-      });
-    });
-
-    document.getElementById('imgModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        this.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
