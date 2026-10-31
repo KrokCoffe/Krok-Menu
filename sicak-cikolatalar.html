@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sıcak Çikolatalar| Krok Cafe</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --main-bg: #eaeaea; /* Arkaplan için yumuşak gri */
+      --accent: #3498db;  /* Link hover rengi */
+      --dark: #2c3e50;   /* Başlık, koyu ton */
+      --light: #ffffff;  /* Beyaz */
+      --menu-bg: #f1f1f1;/* Nav butonları arkaplanı */
+      --green-1: #2e7d32;/* Yeşil */
+      --green-2: #1b5e20;/* Daha koyu yeşil (gradient için) */
+    }
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: rgb(186, 207, 150);
+      color: var(--dark);
+    }
 
+    /* Üst kısım (header) */
+    header {
+      /* Daha yeşil tonlu gradient */
+      background: linear-gradient(to right, var(--green-2), var(--green-1));
+      color: var(--light);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #efeded;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: rgb(186, 207, 150);
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--dark);
+      background: #f1f1f1;
+      margin: 8px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+
+    .item-info {
+      padding: 15px;
+      font-family: 'Playfair Display', serif;
+      color: var(--dark);
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .modal-content, .modal {
+      animation-name: zoom;
+      animation-duration: 0.3s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tatlılar</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="tatlilar.html">Tatlılar</a>
+    <a href="sicak-kahveler.html">Sıcak Kahveler</a>
+    <a href="soguk-kahveler.html">Soğuk Kahveler</a>
+    <a href="sicak-icecekler.html">Sıcak İçecekler</a>
+    <a href="soguk-icecekler.html">Soğuk İçecekler</a>
+    <a href="sicak-cikolatalar.html">Sıcak Çikolatalar</a>
+    <a href="bitki-caylari.html">Bitki Çayları</a>
+    <a href="matcha.html">Matcha</a>
+    <a href="moctail.html">Mocktail</a>
+    <a href="sandvicler.html">Sandviçler</a>
+    
+  </nav>
+
+  <main class="menu-grid">
+    <div class="item">
+      <div class="item-info">
+        <h3>Beyaz Sıcak Çikolata</h3>
+        <p></p>
+        <div class="price">320₺</div>
+        <div class="calorie">~250 kcal</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-info">
+        <h3>Yaban Mersinli Cheesecake</h3>
+        <p></p>
+        <div class="price">350₺</div>
+        <div class="calorie">~290 kcal</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-info">
+        <h3>San Sebastian</h3>
+        <p>Çikolata ile servis edilir</p>
+        <div class="price">350₺</div>
+        <div class="calorie">~330 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Brownie</h3>
+        <p></p>
+        <div class="price">350₺</div>
+        <div class="calorie">~280 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Cookie</h3>
+        <p></p>
+        <div class="price">220₺</div>
+        <div class="calorie">~200 kcal</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-info">
+        <h3>Lotus Cookie</h3>
+        <p></p>
+        <div class="price">250₺</div>
+        <div class="calorie">~270 kcal</div>
+      </div>
+    </div>
+
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="document.getElementById('imgModal').style.display='none'">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    document.querySelectorAll('.item img').forEach(img => {
+      img.addEventListener('click', function() {
+        const modal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+      });
+    });
+
+    document.getElementById('imgModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
